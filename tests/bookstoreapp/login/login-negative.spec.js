@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { loginpage } from '../../../pages/loginpage.js';
-import { validLoginData, passwordNegativeCases } from '../../../utils/datalogin.js';
+import { loginpage } from '../../../pages/bookstoreapp/loginpage.js';
+import { validLoginData, passwordNegativeCases } from '../../../utils/bookstoreapp/datalogin.js';
 
 test.describe('Negative Case Login', () => {
     test('Login with Username Kosong', async ({ page }) => {

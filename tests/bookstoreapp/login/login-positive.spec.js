@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { loginpage } from "../../../pages/loginpage.js";
+import { loginpage } from "../../../pages/bookstoreapp/loginpage.js";
 import { validLoginData } from "../../../utils/datalogin.js";
 
 test.describe("Positive Case Login", () => {

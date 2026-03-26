@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { RegisterPage } from '../../../pages/RegisterPage.js';
+import { RegisterPage } from '../../../pages/bookstoreapp/RegisterPage.js';
 import { DataValid, passwordNegativeCases } from '../../../utils/DataRegister.js';
 
 test.describe('Positive Case Register', () => {

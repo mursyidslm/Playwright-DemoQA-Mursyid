@@ -1,5 +1,5 @@
 import { expect } from "@playwright/test";
-import { validLoginData } from "../utils/datalogin.js";
+import { validLoginData } from "../../utils/bookstoreapp/datalogin.js";
 
 export class loginpage {
   constructor(page) {
