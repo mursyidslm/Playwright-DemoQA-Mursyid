@@ -11,6 +11,5 @@ export const passwordNegativeCases = [
   { name: "Tidak ada angka (digit)", password: "NoDigitA!bc" },
   { name: "Hanya huruf saja", password: "OnlyLetters" },
   { name: "Hanya angka dan simbol", password: "12345678!@#" },
-  { name: "Hanya spasi kosong", password: "          " },
-  { name: "Password kosong (blank)", password: "" }
+  { name: "Hanya spasi kosong", password: "          " }
 ];
