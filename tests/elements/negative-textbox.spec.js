@@ -1,6 +1,6 @@
 import {test, expect} from "@playwright/test";
 import { textboxpages } from "../../pages/elements/textboxpage.js";
-import { validDataTextBox, negativeDataEmailTextBox } from "../../utils/elements/datatextbox.js";
+import { validDataTextBox, negativeDataEmailTextBox } from "../../test-data/elements/datatextbox.js";
 
 test.describe("Negative Case Text Box Element", () => {
   negativeDataEmailTextBox.forEach((invalidemail) => {
