@@ -1,0 +1,12 @@
+{
+  "name": "playwright-demoqa",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "rm -rf test-results && npx playwright test",
+    "test:ui": "rm -rf test-results && npx playwright test --ui"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2"
+  }
+}
