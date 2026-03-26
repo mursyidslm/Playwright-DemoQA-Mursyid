@@ -13,6 +13,9 @@ test.describe('Positive Case Register', () => {
         await registerPage.verifyAlertSuccess();
     });
     // ini ketahan sama capctha jadi gabisa lanjut
-    
-    
+    test('Validate button back to login is functional', async ({ page }) => {
+        const registerPage = new RegisterPage(page);
+        await registerPage.visit();
+        await registerPage.validatebuttonbacktologin();
+    });
 });

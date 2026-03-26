@@ -10,6 +10,7 @@ export class loginpage {
     this.newUserButton = page.getByRole("button", { name: "New User" });
     this.name = page.locator('#userName-value');
     this.logoutButton = page.getByRole("button", { name: "Logout" });
+    this.newUserButton = page.getByRole("button", { name: "New User" });
     this.errorMsg = this.page.locator("#name");
   }
 
@@ -48,5 +49,10 @@ export class loginpage {
   } 
   async verifyfieldpasswordInvalidError() {
     await expect(this.errorMsg).toHaveText(/Invalid username or password/, { timeout: 10000 });
+  }
+  async validatebuttonNewUser() {
+    await expect(this.newUserButton).toBeVisible();
+    await this.newUserButton.click();
+    await expect(this.page).toHaveURL("https://demoqa.com/register");
   }
 }

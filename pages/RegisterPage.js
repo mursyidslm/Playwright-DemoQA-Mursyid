@@ -9,6 +9,7 @@ export class RegisterPage {
     this.userName = page.getByRole("textbox", { name: "Username" });
     this.password = page.getByRole("textbox", { name: "Password" });
     this.registerButton = page.getByRole("button", { name: "Register" });
+    this.backToLoginButton = page.getByRole("button", { name: "Back to Login" });
     this.errorMsg = this.page.locator("#name");
   }
 
@@ -75,6 +76,11 @@ export class RegisterPage {
   async verifyfieldpasswordInvalidError() {
     await expect(this.errorMsg).toContainText(/Passwords must/, { timeout: 10000 });
     // ini gabisa karna dia kena capctha jadi errornya muncul di console bukan di UI, jadi gabisa di assert pake locator, jadi saya buat pause aja biar bisa diliat manualnya, kalo mau lanjut harus disable captcha nya dulu
+  }
+  async validatebuttonbacktologin() {
+    await expect(this.backToLoginButton).toBeVisible();
+    await this.backToLoginButton.click();
+    await expect(this.page).toHaveURL("https://demoqa.com/login");
   }
   async pause() {
     await this.page.pause();
